@@ -1,0 +1,10 @@
+<h1>Start Dancing now</h1>
+
+
+<% dances.forEach((dance) => { %>
+  <h1><%= dance.name %></h1>
+  <h2><%= dance.genre.name %></h2>
+  <h3><%= dance.user %></h3>
+  <p><%= dance.description %></h3><br>
+  <a href="/dances/<%= dance.id %>"><%= dance.name %></a>
+<% }) %>

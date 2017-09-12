@@ -11,15 +11,33 @@ Dance.collection.drop();
 Genre.collection.drop();
 
 Genre.create([{
-  name: 'Salsa-Jazz'
+  name: 'Mlazi milano'
+},{
+  name: 'Azonto Dance'
+},{
+  name: 'Makossa Dance'
+},{
+  name: 'Alanta Dance'
+},{
+  name: 'Mapouka Dance'
+},{
+  name: 'Yahoozee Dance'
+},{
+  name: 'Hlokoloza Dance'
+},{
+  name: 'Bobaraba Dance'
+},{
+  name: 'Suo Dance'
+},{
+  name: 'The Galala'
 }]).then((genres) => {
   console.log(`${genres.length} genres created!`);
 
   return Dance.create([{
-    name: 'Salsa',
+    name: 'Taxi driver',
     genre: genres[0],
-    description: 'dance side to side and make it work',
-    videoId: 'https://youtu.be/PWiLi22Cq8w'
+    description: 'The only way to get around the streets',
+    videoId: 'https://www.youtube.com/watch?v=mYnsfPVLXeg'
   }]);
 })
   .then(dances => console.log(`${dances.length}

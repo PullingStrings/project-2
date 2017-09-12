@@ -1,0 +1,16 @@
+<form method="POST" action="/dances/<%= dance.id %>">
+  <input type="hidden" name="_method" value="PUT">
+  <div>
+    <label>Dance Name</label>
+    <input type="text" name="name" value="<%= dance.name %>">
+  </div>
+  <div>
+    <label>Name of genre</label>
+    <select name="genre">
+      <% genres.forEach((genre) => { %>
+        <option value="<%= genre.id %>"><%= genre.name %></option>
+      <% }) %>
+    </select>
+  </div>
+  <button>Update</button>
+</form>

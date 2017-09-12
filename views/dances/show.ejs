@@ -1,0 +1,17 @@
+<h1>Dance Show</h1>
+
+<h2><%= dance.name %></h2>
+<p><%= dance.genre.name %></p>
+<p><%= dance.description %></p>
+<p><%= dance.videoId %></p>
+
+<% if (dance.videoId) { %>
+  <iframe width="300" height="300" src="https://www.youtube.com/embed/<%= dance.videoId %>" frameborder="0" allowfullscreen ></iframe>
+<% } %>
+
+  <a href="/dances/<%=dance.id %>/edit">Edit</a>
+
+  <form method="POST" action="/dances/<%= dance.id %>">
+    <input type="hidden" name="_method" value="DELETE">
+    <button>Delete</button>
+  </form>

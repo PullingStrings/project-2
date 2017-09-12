@@ -1,0 +1,21 @@
+<h1>New Dance</h1>
+
+<form method="POST" action="/dances">
+  <div>
+    <label>Dance Name</label>
+    <input type="text" name="name">
+  </div>
+  <div>
+    <label>YouTube URL</label>
+    <input type="text" name="videoId">
+  </div>
+  <div>
+    <label>Select Genre</label>
+    <select name="genre">
+      <% genres.forEach((genre) => { %>
+        <option value="<%= genre.id %>"><%= genre.name %></option>
+      <% }) %>
+    </select>
+  </div>
+  <button>Create</button>
+</form>

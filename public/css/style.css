@@ -1,2 +1,11 @@
-body{color:tomato}
-/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0eWxlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsS0FDRSxNQUFPIiwiZmlsZSI6InN0eWxlLmNzcyIsInNvdXJjZXNDb250ZW50IjpbImJvZHkge1xuICBjb2xvcjogdG9tYXRvO1xufVxuIl19 */
+.hero.homepage {
+  background-image: url(https://theimpactnews.com/wp-content/uploads/2016/04/african-dancers.jpg);
+  background-size: cover;
+}
+
+.navbar-menu.is-active {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  background-color: #fff;
+}/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0eWxlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsS0FDRSxNQUFPIiwiZmlsZSI6InN0eWxlLmNzcyIsInNvdXJjZXNDb250ZW50IjpbImJvZHkge1xuICBjb2xvcjogdG9tYXRvO1xufVxuIl19 */

@@ -8,4 +8,11 @@ const danceSchema = new mongoose.Schema({
   videoId: String
 });
 
+danceSchema.pre('save', function splitUrl(next){
+  if(this.isModified('videoId')) {
+    this.videoId = this.videoId.split('v=')[1];
+  }
+  next();
+});
+
 module.exports = mongoose.model('Dance', danceSchema);
