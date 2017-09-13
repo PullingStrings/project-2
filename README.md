@@ -55,7 +55,7 @@ Software languages used-
 * SCSS
 * Javascript ES6
 * Jquery 3.10
-* Gulp
+* Gulp Mango & Node
 * Yarn
 * Git & Git Hub
 
