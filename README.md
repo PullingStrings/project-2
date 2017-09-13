@@ -51,6 +51,7 @@ Then you will be also able to login and add, edit and remove new or old dances y
 Software languages used-
 
 * HTML 5
+* Bulma BootStrap
 * SCSS
 * Javascript ES6
 * Jquery 3.10
