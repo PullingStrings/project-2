@@ -1,8 +1,8 @@
 # project-2
 
-###Dance mzansi
+### Dance mzansi
 
-###website with dataBase
+### website with dataBase
 
 
 ![screen shot 2017-09-13 at 12 08 17](https://user-images.githubusercontent.com/27218761/30374337-84126db2-987c-11e7-8896-e3cce68e8b7c.png)
@@ -26,13 +26,15 @@ To run the code,
 The website is all about dancing...but from down south of Africa. 
 
 ### What to look for 
+
 The beginning is fairly simple, if you would like to see some of the dances then you can view them and start dancing.
 ![screen shot 2017-09-13 at 12 08 45](https://user-images.githubusercontent.com/27218761/30374405-c5da39a0-987c-11e7-85b3-878d33789435.png)
 ![screen shot 2017-09-13 at 12 08 32](https://user-images.githubusercontent.com/27218761/30374435-dafced28-987c-11e7-83bb-5f28f4618b86.png)
 
 
 
-###Create your on account
+### Create your on account
+
 If you would like to add you own music genres and dance styles you will have to create you own account
 ![screen shot 2017-09-13 at 12 13 19](https://user-images.githubusercontent.com/27218761/30374468-f711e72a-987c-11e7-9984-d02129fe5723.png)
 
