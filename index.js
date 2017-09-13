@@ -8,10 +8,8 @@ mongoose.Promise      = require('bluebird');
 const router          = require('./config/routes');
 const { dbURI, port, secret } = require('./config/environment');
 const session         = require('express-session');
-const userAuth        = require('./lib/Auth');
+const userAuth        = require('./lib/userAuth');
 const flash           = require('express-flash');
-
-
 
 const methodOverride  = require('method-override');
 

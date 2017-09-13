@@ -13,3 +13,12 @@ $burger.on('click', () => {
 if($countryForm.length > 0) $countryForm.find('select').on('change', () => $countryForm.trigger('submit'));
 
 if($form.length > 0) $form.validate();
+
+$('.carousel').slick({
+  autoplay: true,
+  arrows: false,
+  autoplaySpeed: 4000,
+  draggable: false,
+  pauseOnHover: false,
+  speed: 1000
+});

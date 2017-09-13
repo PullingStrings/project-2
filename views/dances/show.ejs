@@ -1,17 +1,32 @@
-<h1>Dance Show</h1>
+<div class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-6">
+        <div class="video-wrapper">
+          <% if (dance.videoId) { %>
+            <iframe src="https://www.youtube.com/embed/<%= dance.videoId %>" frameborder="4" allowfullscreen ></iframe>
+          <% } %>
+        </div>
+      </div>
 
-<h2><%= dance.name %></h2>
-<p><%= dance.genre.name %></p>
-<p><%= dance.description %></p>
-<p><%= dance.videoId %></p>
+      <div class="column is-6">
+        <h1 class="title is-1"><%= dance.name %></h1>
+        <h3 class="subtitle is-3"><%= dance.genre.name %></h3>
+        <br>
+        <p><%= dance.description %></p>
+      </div>
+    </div>
 
-<% if (dance.videoId) { %>
-  <iframe width="300" height="300" src="https://www.youtube.com/embed/<%= dance.videoId %>" frameborder="0" allowfullscreen ></iframe>
-<% } %>
-
-  <a href="/dances/<%=dance.id %>/edit">Edit</a>
-
-  <form method="POST" action="/dances/<%= dance.id %>">
-    <input type="hidden" name="_method" value="DELETE">
-    <button>Delete</button>
-  </form>
+    <div class="columns">
+      <div class="column is-6 has-text-centered">
+        <% if(locals.isAuthenticated && dance.user && dance.user.id === locals.currentUser.id){ %>
+        <form method="POST" action="/dances/<%= dance.id %>">
+          <input type="hidden" name="_method" value="DELETE">
+          <a class="button is-large"href="/dances/<%=dance.id%>/edit">Edit</a>
+          <button class="button is-danger is-large">Delete</button>
+        </form>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</div>

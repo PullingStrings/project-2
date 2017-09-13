@@ -9,10 +9,11 @@ function sessionsCreate(req, res) {
     .findOne({ email: req.body.email })
     .then((user) => {
       if(!user || !user.validatePassword(req.body.password)) {
-        res.status(401).render('sessions/new', { message: 'Put in the right credentials man'});
+        req.flash('danger', 'Pop in the right credentials and you will be sorted');
+        return res.redirect('/login');
       }
       req.session.userId = user.id;
-      return res.redirect('/dances');
+      res.redirect('/dances');
     });
 }
 

@@ -5,12 +5,13 @@ const danceSchema = new mongoose.Schema({
   genre: { type: mongoose.Schema.ObjectId, ref: 'Genre' },
   user: { type: mongoose.Schema.ObjectId, ref: 'User' },
   description: String,
-  videoId: String
+  videoId: String,
+  image: String
 });
 
 danceSchema.pre('save', function splitUrl(next){
   if(this.isModified('videoId')) {
-    this.videoId = this.videoId.split('v=')[1];
+    this.videoId = this.videoId.match(/[A-z1-9]{11}/);
   }
   next();
 });

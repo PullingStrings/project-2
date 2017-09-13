@@ -1,10 +1,22 @@
-<h1>Start Dancing now</h1>
-
-
-<% dances.forEach((dance) => { %>
-  <h1><%= dance.name %></h1>
-  <h2><%= dance.genre.name %></h2>
-  <h3><%= dance.user %></h3>
-  <p><%= dance.description %></h3><br>
-  <a href="/dances/<%= dance.id %>"><%= dance.name %></a>
-<% }) %>
+<main class="container">
+  <h1 class="title">Start Dancing now</h1>
+  <div class="columns is-multiline">
+    <% dances.forEach((dance) => { %>
+      <div class="column is-4">
+        <a href="/dances/<%= dance.id %>">
+          <h1 class="title is-2"><%= dance.name %></h1>
+        </a>
+      <h2 class="subtitle is-4"><%= dance.genre.name %></h2>
+      <% if(dance.user) { %>
+        <hr>
+      <h3 class="title is-6">By <%= dance.user.username %></h3>
+        <% } %>
+        <figure class="image">
+        <a href="/dances/<%= dance.id %>"><h1 class="title is-1">
+          <img src="<%= dance.image %>" alt="<%= dance.name %>">
+        </a>
+        </figure>
+      </div>
+        <% }) %>
+  </div>
+</main>

@@ -1,21 +1,40 @@
-<h1>New Dance</h1>
-
-<form method="POST" action="/dances">
-  <div>
-    <label>Dance Name</label>
-    <input type="text" name="name">
+<div class="section">
+  <div class="container">
+    <div class="columns">
+      <form method="POST" action="/dances">
+        <div class="field">
+          <label class="title is-2">Dance Name</label>
+          <input class="input" type="text" name="name" placeholder="Put a dance name">
+        </div>
+        <div class="field">
+          <label class="title is-2">YouTube URL <small class="subtitle is-6">Enter a valid YouTube URL, for example: https://www.youtube.com/watch?v=PWiLi22Cq8w</small></label>
+          <input class="input" type="text" name="videoId" pattern="^https?:\/\/www\.youtube\.com\/watch\?v=[A-z1-9]{11}.*">
+        </div>
+        <div class="field">
+          <label class="title is-2">Select Genre</label>
+          <br>
+          <div class="select">
+            <select name="genre">
+              <% genres.forEach((genre) => { %>
+                <option value="<%= genre.id %>"><%= genre.name %></option>
+                <% }) %>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label class="title is-2">Description</label>
+            <div class="control">
+              <textarea class="textarea" type="text" name="description" maxlength="380" required></textarea>
+            </div>
+          </div>
+          <div class="field">
+            <label class="title is-2">Image</label>
+            <div class="control">
+              <input class="input" name="image" type="text" placeholder="it would be really cool if you put one it" required>
+            </div>
+          </div>
+          <button class="button is-large">Create</button>
+        </form>
+      </div>
+    </div>
   </div>
-  <div>
-    <label>YouTube URL</label>
-    <input type="text" name="videoId">
-  </div>
-  <div>
-    <label>Select Genre</label>
-    <select name="genre">
-      <% genres.forEach((genre) => { %>
-        <option value="<%= genre.id %>"><%= genre.name %></option>
-      <% }) %>
-    </select>
-  </div>
-  <button>Create</button>
-</form>

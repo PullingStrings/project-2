@@ -10,7 +10,7 @@ const sessions = require('../controllers/sessions');
 
 
 // A home router
-router.get('/', (req, res ) => res.render('home'));
+router.get('/', (req, res ) => res.render('home', { isHomepage: true }));
 
 router.route('/dances')
   .get(dances.index)

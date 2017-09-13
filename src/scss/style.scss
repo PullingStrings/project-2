@@ -1,3 +1,95 @@
+html, body {
+  min-height: 100vh;
+  // height: 100%;
+  font-family: 'Inconsolata', monospace;
+
+}
+
 body {
-  color: tomato;
+  &.home {
+    .title{
+      color: white;
+      font-size: 6rem;
+    }
+
+    .subtitle{
+      color: white;
+      line-height: 6.25;
+    }
+  }
+}
+
+.slide-one, .slide-two, .slide-three {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: calc(100vh - 52px);
+}
+
+.slide-one {
+  background-image: url('../assets/images/danceStreet1.jpg');
+  
+}
+
+.slide-two {
+  background-image: url('../assets/images/danceStreet2.jpg');
+
+}
+
+.slide-three {
+  background-image: url('../assets/images/danceStreet3.jpg');
+
+}
+
+.video-wrapper {
+  position: relative;
+  padding-top: 66.66%;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.button.is-danger.is-outlined {
+    background-color: transparent;
+    border-color: #ff3860;
+    color: white;
+    font-weight: bold;
+}
+
+.title:not(:last-child) {
+    margin-bottom: 2.5rem;
+}
+
+.navbar-item, .navbar-link {
+    color: #4a4a4a;
+    display: block;
+    line-height: 1.5;
+    padding: .5rem 1rem;
+    position: relative;
+    font-size: 20px;
+  }
+
+.column {
+
+}
+
+.message-danger{
+  background-color: #dc2948;
+  color: white;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.hero.is-large .hero-body {
+    padding-bottom: 5rem;
+    padding-top: 18rem;
 }

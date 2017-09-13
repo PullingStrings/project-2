@@ -1,9 +1,7 @@
 <nav class="navbar">
   <div class="navbar-brand">
     <a class="navbar-item" href="/">
-      <img src="http://thurrock.idea13.org/wp-content/uploads/2016/06/dance.jpg" alt="Dance">
-      &nbsp;
-      Dance
+      Dance Move Shake, Mzanzi Style
     </a>
     <div class="navbar-burger" data-target="#mobile-menu">
       <span></span>
@@ -13,14 +11,14 @@
   </div>
   <div id="mobile-menu" class="navbar-menu">
     <div class="navbar-end">
-      <a class="navbar-item" href="/dances">All Dances</a>
-      <a class="navbar-item" href="/dances/new">New Dance</a>
+      <a class="navbar-item" href="/dances">View moves</a>
+      <a class="navbar-item" href="/dances/new">Add moves</a>
       <% if(!locals.isAuthenticated) { %>
         <a class="navbar-item" href="/register">Register</a>
-        <a class="navbar-item" href="/login">login</a>
+        <a class="navbar-item" href="/login">Login</a>
       <% } else { %>
-        <a class="navbar-item" href="/dances/new">New Dance</a>
-        <a class="navbar-item" href="/logout">logout</a>
+        <a class="navbar-item" href="/dances/new">Add your own moves</a>
+        <a class="navbar-item" href="/logout">Logout</a>
       <% } %>
     </div>
   </div>
